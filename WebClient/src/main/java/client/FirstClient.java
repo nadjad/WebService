@@ -20,16 +20,14 @@ public class FirstClient {
 
 		WebTarget target = client.target(getBaseURI());
 
-		Response response = target.path("rest").path("book").request()
-				.accept(MediaType.TEXT_PLAIN).get(Response.class);
+		Response response = target.path("rest").path("book").request().accept(MediaType.TEXT_PLAIN).get(Response.class);
 		System.out.println(response.toString());
 
 		// String respPlain = target.path("rest").path("book").request()
 		// .accept(MediaType.TEXT_PLAIN).get(String.class);
 		// System.out.println(respPlain);
 
-		String respXml = target.path("rest").path("book").request()
-				.accept(MediaType.TEXT_XML).get(String.class);
+		String respXml = target.path("rest").path("book").request().accept(MediaType.TEXT_XML).get(String.class);
 		System.out.println(respXml);
 
 		// String respHtml = target.path("rest").path("book").request()
